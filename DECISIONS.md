@@ -9,3 +9,9 @@ Why Typescript instead of pure Node? I try to avoid pure JS and force myself to 
 * * Then we iterate over the array and check if we have an active interval. if not we set the current interval as active.
 * * If we have an active interval we check if the current interval is overlapping with the active interval. If not we add the active interval to the result array and set the current interval as active. If it is we merge the two intervals.
 
+3. Breaking the Solution:
+An downside of TDD is once if you have an working solution it suggests that you are done. But Humans makes mistakes. So I added some more Tests wich are breaking it. one obvious case is that the interval itself is not sorted correctly. The other one is text as User input. I decided to skip out those invalid arrays from the execution.
+
+
+
+

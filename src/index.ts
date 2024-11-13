@@ -1,8 +1,17 @@
 export type Interval = [number, number];
 
 export default function merge(intervals: Interval[]): Interval[] {
-  // Sort intervals with the lowest starting number at first
-  const sorted = intervals.sort((a, b) => a[0] - b[0])
+  //filter out invalid input
+  const filtered = intervals.filter((interval) => {
+    if (interval.length !== 2 || typeof interval[0] !== 'number' || typeof interval[1] !== 'number') {
+      return false;
+    }
+    return true;
+  });
+
+  const sorted = filtered
+    .map((interval) => interval.sort((a, b) => a - b)) // sort the interval itself
+    .sort((a, b) => a[0] - b[0]) // sort all intervals by the first number
 
   const merged: Interval[] = [];
 
