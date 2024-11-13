@@ -26,4 +26,25 @@ describe('Test Suite', () => {
     // @ts-ignore // we need to use this since typescript would not allow this
     expect(merge(intervals)).toStrictEqual(result);
   })
+
+  test('js typic inputs', () => {
+    const intervals = [[25, 30], [2, 19], [14, 23], [4, 8], [null, undefined]];
+    const result = [[2, 23], [25, 30]];
+    // @ts-ignore // we need to use this since typescript would not allow this
+    expect(merge(intervals)).toStrictEqual(result);
+  })
+
+  test('js typic number inputs: Infinity', () => {
+    const intervals = [[25, 30], [2, 19], [14, 23], [4, 8], [Infinity, 1]];
+    const result = [[1, Infinity]];
+    // @ts-ignore // we need to use this since typescript would not allow this
+    expect(merge(intervals)).toStrictEqual(result);
+  })
+
+  test('js typic number inputs: NaN', () => {
+    const intervals = [[25, 30], [2, 19], [14, 23], [4, 8], [NaN, 1]];
+    const result = [[2, 23], [25, 30]];
+    // @ts-ignore // we need to use this since typescript would not allow this
+    expect(merge(intervals)).toStrictEqual(result);
+  })
 });

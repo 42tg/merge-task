@@ -12,6 +12,8 @@ Why Typescript instead of pure Node? I try to avoid pure JS and force myself to 
 3. Breaking the Solution:
 An downside of TDD is once if you have an working solution it suggests that you are done. But Humans makes mistakes. So I added some more Tests wich are breaking it. one obvious case is that the interval itself is not sorted correctly. The other one is text as User input. I decided to skip out those invalid arrays from the execution.
 
+4. Infinity and NaN:
+Difficult topic... while Infinity makes sense in the execution, NaN does not. And it does not help ourself that ` typeof interval[0] !== 'number'` will not catch NaN. So I added an additional check for that.
 
 
 
