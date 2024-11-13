@@ -16,4 +16,11 @@ An downside of TDD is once if you have an working solution it suggests that you 
 Difficult topic... while Infinity makes sense in the execution, NaN does not. And it does not help ourself that ` typeof interval[0] !== 'number'` will not catch NaN. So I added an additional check for that.
 
 
+# Conclusion
 
+## Runtime Complexity
+I want to be honest, I have no real Talent in Big O Notations. But searching up the Internet for the O Notation of javascript `.sort()` its O(n log n).
+The Filtering is only O(n) and the Iteration as well. Since that not overrule the O(n log n) I would say the final O Notation is O(n log n).
+
+## Memory Complexity
+Difficult question for an Javascript Developer to answer. I would guess O(n), but Javascript is copying the Arrays with each map or filter function underneath.
