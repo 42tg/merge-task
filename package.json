@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "docker:test": "docker run -v $(pwd):/app -w /app node:23 yarn run test",
+    "docker:build": "docker run -v $(pwd):/app -w /app node:23 yarn run build"
   },
   "keywords": [],
   "author": "",
