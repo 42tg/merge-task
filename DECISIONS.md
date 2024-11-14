@@ -24,3 +24,12 @@ The Filtering is only O(n) and the Iteration as well. Since that not overrule th
 
 ## Memory Complexity
 Difficult question for an Javascript Developer to answer. I would guess O(n), but Javascript is copying the Arrays with each map or filter function underneath.
+
+
+# Additions
+After finishing the Implementation I did a break and continued on the next day.
+It seems weird to extend this by adding an CLI and a Dockerfile, since the usability is limited. But it's always provide some sort of Indipendency of your local Enviroument.
+So bare with me that the CLI implementation is not handling any further Input validation. It's just for Demo purpose.
+
+I also fill up the Readme with the most important facts since the task established itself.
+The whole Project took me around 4 to 5 hours to complete.
